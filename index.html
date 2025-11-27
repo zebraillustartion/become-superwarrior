@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Warrior Growth Diary</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=VT323&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              pixel: ['"VT323"', "monospace"],
+            },
+            colors: {
+              pixel: {
+                dark: "var(--pixel-dark)",
+                card: "var(--pixel-card)",
+                accent: "var(--pixel-accent)",
+                blue: "var(--pixel-blue)",
+                gold: "#ffd700",
+                green: "#4caf50",
+                text: "var(--pixel-text)",
+                muted: "var(--pixel-muted)",
+                input: "var(--pixel-input-bg)",
+              },
+            },
+            boxShadow: {
+              pixel: "4px 4px 0px 0px rgba(0,0,0,1)",
+              "pixel-sm": "2px 2px 0px 0px rgba(0,0,0,1)",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      :root {
+        /* Default Dark Theme (Fallback) */
+        --pixel-dark: #1a1a2e;
+        --pixel-card: #16213e;
+        --pixel-accent: #e94560;
+        --pixel-blue: #0f3460;
+        --pixel-text: #eeeeee;
+        --pixel-muted: #9ca3af;
+        --pixel-input-bg: #2a2a40;
+      }
+
+      body {
+        background-color: var(--pixel-dark);
+        color: var(--pixel-text);
+        font-family: "VT323", monospace;
+        transition: background-color 0.3s ease, color 0.3s ease;
+        overflow-y: scroll; /* Allow scrolling */
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+      }
+      
+      /* Hide Scrollbar for Chrome, Safari and Opera */
+      body::-webkit-scrollbar {
+        display: none;
+      }
+
+      /* Smooth transitions for theme changes */
+      *, *::before, *::after {
+        transition-property: background-color, border-color, color, fill, stroke;
+        transition-duration: 0.2s;
+        transition-timing-function: ease-in-out;
+      }
+      
+      /* Utilities */
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.555.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "framer-motion": "https://aistudiocdn.com/framer-motion@^12.23.24",
+    "uuid": "https://aistudiocdn.com/uuid@^13.0.0"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
